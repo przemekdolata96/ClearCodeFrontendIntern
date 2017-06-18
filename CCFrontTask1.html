@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>CCFrontTask1</title>
+
+	<style type="text/css">
+		body
+		{
+			font-family: "Arial", Helvetica, sans-serif;
+		}
+		.mytooltip 
+		{
+		    position: relative;
+		    display: inline-block;
+		    border-bottom: 2px dotted #ff5722;
+		    cursor: url(http://i.imgur.com/ZugGzJk.png), auto;
+		}
+
+		.mytooltip .mytooltiptext 
+		{
+		    visibility: hidden;
+		    width: 240px;
+		    background-color: #ff5722;
+		    color: #ffffff;
+		    text-align: left;
+		    border-radius: 5px;
+		    padding: 11px 5px;
+		    position: absolute;
+		    margin-bottom: 3px;
+		    z-index: 1;
+		    bottom: 150%;
+		    left: 50%;
+		    margin-left: -128px;
+		    opacity: 0;
+		    transition: opacity 2s;
+		}
+
+		.mytooltip .mytooltiptext::after
+		 {
+		    content: "";
+		    position: absolute;
+		    top: 100%;
+		    left: 50%;
+		    margin-left: -10px; 
+		    border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-top: 12px solid #ff5722;  
+		}
+
+		.mytooltip:hover .mytooltiptext 
+		{
+		    visibility: visible;
+		    opacity: 1;
+		}
+	</style>
+</head>
+<body>
+
+	<div align="center" style="margin-top: 200px">
+		<p>This is an awesome 
+			<span class="mytooltip">tooltip
+				<span class="mytooltiptext">It's so cool</span>
+			</span>
+		</p>
+	</div>
+	
+</body>
+</html>
