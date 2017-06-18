@@ -56,4 +56,4 @@ exports.damage=function(spellString)
 		}
 		return damage;
 	}
-};
+}
